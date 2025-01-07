@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext,useEffect } from 'react'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { Typography } from '@mui/material';
@@ -7,7 +7,7 @@ export default function Product(props) {
     const { id , productName, productImage , price} = props.data
     const [cartItems , addToCart , removeFromCart] = useContext(shopContext)
    const isInCart = cartItems?.some((item)=> item.id === id)
-    
+
   return (
    <>
        <Box component="div" className='product' sx={{

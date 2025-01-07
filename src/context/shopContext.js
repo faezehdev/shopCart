@@ -1,7 +1,15 @@
 import { createContext, useState } from "react";
+import {useEffect } from 'react'
 export const shopContext = createContext()
 export const ShopContextProvider = (props)=>{
-   const [cartItems , setCartItems] = useState([])
+    const getStorageData = JSON.parse(localStorage.getItem('cartItems'))
+    const [cartItems , setCartItems] = useState(getStorageData || [])
+    useEffect(() => {
+     const savedItem = localStorage.getItem("cartItems");
+     localStorage.setItem('cartItems',JSON.stringify(cartItems))
+ 
+   }, [cartItems]);
+   
    const addToCart = (proID)=>{
    
     if(cartItems?.find((item)=>{
