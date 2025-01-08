@@ -2,10 +2,11 @@ import React, { useContext,useEffect } from 'react'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { Typography } from '@mui/material';
-import { shopContext } from '../../context/shopContext';
+// import { shopContext } from '../../context/shopContext';
+import { ShopContext2 } from '../../context/ShopContext2';
 export default function Product(props) {
     const { id , productName, productImage , price} = props.data
-    const [cartItems , addToCart , removeFromCart] = useContext(shopContext)
+    const {cartItems , addToCart , removeFromCart} = useContext(ShopContext2)
    const isInCart = cartItems?.some((item)=> item.id === id)
 
   return (

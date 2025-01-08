@@ -1,11 +1,12 @@
 
 import Box from '@mui/material/Box';
 import Product from '../Shop/Product';
-import { shopContext } from '../../context/shopContext';
+// import { shopContext } from '../../context/shopContext';
+import { ShopContext2 } from '../../context/ShopContext2';
 import React, { useContext } from 'react'
 import { PRODUCTS } from '../../data/product';
 export default function Cart() {
-   const [cartItems] = useContext(shopContext)
+   const {cartItems} = useContext(ShopContext2)
    console.log(cartItems);
    
   return (

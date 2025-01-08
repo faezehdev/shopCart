@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { BrowserRouter as Router , Routes , Route,Link } from 'react-router-dom';
 import { FaShoppingBag } from "react-icons/fa";
+import {ShopContext2} from '../context/ShopContext2'
 export default function Nav() {
+  const {cartItems} = useContext(ShopContext2)
+    
+    let itemCount =0
+     cartItems.forEach(a=>{
+     
+      itemCount += a.count
+    })
+    console.log(itemCount);
     const headerLeftStyle={
         width: "100%",
         display:" flex",
@@ -44,7 +53,10 @@ export default function Nav() {
        </h1>
        <Box component="span" className='ShopIcon' >
        <Link to="/cart">
-       <FaShoppingBag />
+       <FaShoppingBag /> 
+<span className="countt">
+  {itemCount}
+</span>
        </Link>
     </Box>
       </Box>
@@ -55,26 +67,6 @@ export default function Nav() {
       </Box>
     </Container>
   </React.Fragment>
-    // <div>
-    //         <header>
-      
-    //   <div className="Left">
-    //     <h1 className='logo'>
-    //     Faezeh
-    //     </h1>
-    //     <span className="ShopIcon">
-    //     <FaShoppingBag />
-    //     </span>
-    //   </div>
-    //   <div className="Right">
-    //   <nav>
-    //  <Link to="/">Shop</Link>
-    //  <Link to="/cart">Cart</Link>
-    //  <Link>AboutUs</Link>
-    //   </nav>
-
-    //   </div>
-    // </header>
-    // </div>
+  
   )
 }

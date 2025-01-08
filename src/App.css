@@ -21,10 +21,26 @@ color: rgb(118, 0, 228);
         justify-content: center;
         align-items: center;
         font-size: 25px;
+        position: relative;
   }
   span.ShopIcon:hover{
     cursor: pointer;
   }
   span.ShopIcon svg{
    fill: white;
+  }
+  .countt{
+    position: absolute;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    background-color: blueviolet;
+    color: white;
+    display: flex
+;
+    font-size: 9px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    left: 15px;
   }
