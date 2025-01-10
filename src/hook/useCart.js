@@ -44,5 +44,11 @@ export default function useCart() {
     }
     
    }
-   return {cartItems , addToCart , removeFromCart}
+   const ResetCart = ()=>{
+       console.log('delete');
+       setCartItems([])
+       localStorage.removeItem("cartItems")
+       
+   }
+   return {cartItems , addToCart , removeFromCart , ResetCart}
 }

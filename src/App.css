@@ -1,4 +1,8 @@
 
+  .App{
+    display: flex;
+    flex-direction: column;
+  }
   .header .Left a{
    font-size: 14px;
    font-weight: 500;

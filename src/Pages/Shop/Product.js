@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 import { Typography } from '@mui/material';
 // import { shopContext } from '../../context/shopContext';
 import { ShopContext2 } from '../../context/ShopContext2';
+import { Link } from 'react-router-dom';
+
 export default function Product(props) {
     const { id , productName, productImage , price} = props.data
     const {cartItems , addToCart , removeFromCart} = useContext(ShopContext2)
@@ -22,15 +24,21 @@ export default function Product(props) {
                width:'100%',
                height:'300px'
              }}>
+              <Link to={`product/${id}`}  sx={{
+                width: '100%',
+                height:'100%'
+              }} > 
              <Box
               component="img"
               sx={{
                 width: '100%',
-                objectFit:'cover'
+                objectFit:'cover',
+                  height:'100%'
               }}
               alt={productName}
               src={productImage}/>
-             </Box>
+             </Link> </Box>
+           
 
              <Box component="div" className='productTitle' sx={{
               display:'flex',

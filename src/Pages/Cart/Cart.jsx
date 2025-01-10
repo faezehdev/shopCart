@@ -2,11 +2,12 @@
 import Box from '@mui/material/Box';
 import Product from '../Shop/Product';
 // import { shopContext } from '../../context/shopContext';
+import Button from '@mui/material/Button';
 import { ShopContext2 } from '../../context/ShopContext2';
 import React, { useContext } from 'react'
 import { PRODUCTS } from '../../data/product';
 export default function Cart() {
-   const {cartItems} = useContext(ShopContext2)
+   const {cartItems , ResetCart} = useContext(ShopContext2)
    console.log(cartItems);
    
   return (
@@ -33,6 +34,8 @@ export default function Cart() {
        
         
     </Box>
+    <Button variant="contained" onClick={ResetCart}
+               sx={{backgroundColor:"rgb(118, 0, 228)",width:"max-content",height:'50px',margin:'2em auto'}}>reset Cart</Button>
     </>
   )
 }
