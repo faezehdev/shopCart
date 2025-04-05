@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <ShopContextProvider2>
-    <Router>
+    <Router  basename="/ShopCart">
       <Nav />
       <Routes>
         <Route path='/' element={<Shop/>} />
