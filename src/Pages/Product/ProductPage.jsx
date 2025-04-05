@@ -11,7 +11,7 @@ export default function ProductPage() {
             {!hasProduct ? (
                 <>
                     <h1>404 - Product Not Found</h1>
-                    <Navigate to='/shopCart/' replace={true} />
+                    <Navigate to='/' replace={true} />
                 </>
             ) : (
                 <div className='proShow' style={{ display: 'flex', flexDirection: 'column' }}>
