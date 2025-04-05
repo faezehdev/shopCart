@@ -13,7 +13,7 @@ export default function ProductPage() {
     <h1>
         404
     </h1>
-    <Navigate to='/' ></Navigate>
+    <Navigate to='/shopCart/' ></Navigate>
     </>):
    (
    <>
