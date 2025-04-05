@@ -63,7 +63,7 @@ export default function Nav() {
       <Box sx={headerLeftStyle} className="Left" >
       <Link to="/shopCart/">Shop</Link>
       {/* <Link to="/cart">Cart</Link> */}
-      <Link>AboutUs</Link>
+      {/* <Link>AboutUs</Link> */}
       </Box>
     </Container>
   </React.Fragment>
