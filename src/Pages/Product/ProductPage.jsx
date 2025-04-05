@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams,Navigate } from 'react-router-dom'
 import { PRODUCTS } from '../../data/product';
 export default function ProductPage() {
     const proID = useParams()
@@ -13,6 +13,7 @@ export default function ProductPage() {
     <h1>
         404
     </h1>
+    <Navigate to='/' ></Navigate>
     </>):
    (
    <>
