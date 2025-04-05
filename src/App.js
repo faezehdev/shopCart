@@ -15,6 +15,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path='/' element={<Shop/>} />
+        <Route path='/shopCart/' element={<Shop/>} />
         <Route path='/cart' element={<Cart/>} />
         <Route path='/product/:id' element={<ProductPage/>} />
       </Routes>
