@@ -61,7 +61,7 @@ export default function Nav() {
     </Box>
       </Box>
       <Box sx={headerLeftStyle} className="Left" >
-      <Link to="/shopCart/">Shop</Link>
+      <Link to="/">Shop</Link>
       {/* <Link to="/cart">Cart</Link> */}
       {/* <Link>AboutUs</Link> */}
       </Box>
